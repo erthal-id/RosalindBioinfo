@@ -1,12 +1,10 @@
-seq = open("arquivo.txt", "r")
-
-seq2=seq[::-1]
-
-replace = seq2.replace("T", "X")
-replace = replace.replace("C", "Y")
-replace = replace.replace("A", "T")
-replace = replace.replace("G", "C")
-replace = replace.replace("X", "A")
-replace = replace.replace("Y", "G")
-
-print(replace)
+with open("arquivo.txt") as arquivo:
+    seq1 = arquivo.read()
+    seqInv = seq1[::-1]
+    seq2 = seqInv.replace("T", "X")
+    seq2 = seq2.replace("C", "Y")
+    seq2 = seq2.replace("A", "T")
+    seq2 = seq2.replace("G", "C")
+    seq2 = seq2.replace("X", "A")
+    seq2 = seq2.replace("Y", "G")
+    print(seq2)

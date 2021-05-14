@@ -1,5 +1,4 @@
-seqDNA = open("arquivo.txt", "r")
-
-seqRNA = seqDNA.replace("T", "U")
-
-print(seqRNA)
+with open("arquivo.txt") as arquivo:
+    DNAseq = arquivo.read()
+    RNAseq = DNAseq.replace("T", "U")
+    print(RNAseq)
